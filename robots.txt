@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saviold.github.io/gv-lacke/sitemap.xml
