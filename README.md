@@ -62,7 +62,9 @@ Danach live unter https://saviold.github.io/gv-lacke/
 ## Noch zu bestätigen / anzupassen (Platzhalter)
 - **Kontakt-E-Mail** (`bewerbung@gv-lacke.de`) sowie **Impressum-/Datenschutz-Links** – bitte durch die
   echten Angaben von GV-Lacke ersetzen. Aktuell auf die Unternehmensseite verlinkt.
-- Ggf. konkrete Benefits (z. B. Urlaubstage, Sonderzahlungen) ergänzen – aktuell bewusst allgemeine „Klassiker“.
+- Benefits: die von GV-Lacke gelieferten Leistungen sind eingebaut (13. Gehalt, 1.200 € Urlaubsgeld,
+  50-€-Gutschein, Fahrtkostenzuschuss, Jahresprämie, Jubiläumsbonus, betriebl. Pflegeversicherung).
+  Bitte kurz bestätigen: Ist der 50-€-Gutschein **monatlich** (aktuell so kommuniziert)?
 - Weiteres/finales Bildmaterial für Hero und Sektionen kann jederzeit in `bilder/` ergänzt werden.
 
 ---
