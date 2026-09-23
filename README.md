@@ -18,21 +18,24 @@ und mit den unternehmenseigenen Positionen.
 - Logo aus dem übermittelten Logo-Bild abgeleitet (Voll- und Kurzform).
 
 ## Offene Stellen (ausschließlich diese kommuniziert)
-Beide unbefristet, Vollzeit, sofortiger Eintritt – Standort Bad Grönenbach.
+Alle unbefristet, Vollzeit, sofortiger Eintritt – Standort Bad Grönenbach, Bezahlung nach Chemie-Tarif.
 1. **Produktion Dosieranlage (m/w/d)**
 2. **Abfüllerei (m/w/d)**
+3. **Fachlagerist (m/w/d)** – Voraussetzung: Staplerschein & Führerschein Klasse B
 
 (Inhalte aus den übermittelten Stellenbeschreibungen abgeleitet.)
 
-## Vorfilter-Formular (eine Frage pro Schritt)
-Reihenfolge: Stelle → 4 Fragen → Kontaktdaten (6 Schritte gesamt).
+## Vorfilter-Formular (eine Frage pro Schritt) – stellenabhängig
+Reihenfolge: Stelle → Fragen → Kontaktdaten. Produktion/Abfüllerei = 6 Schritte, Fachlagerist = 7 Schritte
+(die stellenspezifische Führerschein-Frage wird nur für den Fachlageristen eingeblendet).
 
 | Frage | Kategorie | Logik |
 |---|---|---|
-| Deutschkenntnisse (Sicherheits-/Arbeitsanweisungen) | **Pflicht (K.-o.)** | „Kaum / gar nicht“ → Bewerbung endet sofort |
-| Bereitschaft zu körperlicher Produktionstätigkeit | **Pflicht (K.-o.)** | „Nein, das ist eher nichts für mich“ → Bewerbung endet sofort |
-| Erfahrung in Produktion / mit Lacken, Farben, Chemie | optional | „Quereinsteiger:in“ → wird als „nicht erfüllt“ übertragen |
-| Staplerschein | optional | „Nein“ → wird als „nicht erfüllt“ übertragen |
+| Deutschkenntnisse (Sicherheits-/Arbeitsanweisungen) | **Pflicht (K.-o.)** – alle | „Kaum / gar nicht“ → Bewerbung endet sofort |
+| Bereitschaft zu körperlicher Tätigkeit (Produktion/Lager) | **Pflicht (K.-o.)** – alle | „Nein, eher nicht“ → Bewerbung endet sofort |
+| Führerschein Klasse B | **Pflicht (K.-o.)** – nur Fachlagerist | nur eingeblendet für Fachlagerist; „Nein“ → Bewerbung endet sofort |
+| Staplerschein | **Pflicht (K.-o.)** für Fachlagerist / **optional** sonst | Fachlagerist „Nein“ → Ende; Produktion „Nein“ → weiter, markiert |
+| Erfahrung (Produktion/Lager) | optional | „Quereinsteiger:in“ → wird als „nicht erfüllt“ übertragen |
 
 - **K.-o.:** freundlicher Abschlusshinweis + Verweis auf die übrigen offenen Stellen. **Wird NICHT an den Webhook gesendet.**
 - **Optional nicht erfüllt:** Bewerber kommt normal weiter; Antwort wird übertragen und als „nicht erfüllt“ markiert (Feld `optionale_kriterien` + Suffix „— nicht erfüllt“).
@@ -48,7 +51,7 @@ Beim Fragenwechsel wird bewusst **nicht** gescrollt/fokussiert/neugeladen:
 ## Webhook (LeadTable)
 In `index.html` → `WEBHOOK_URL`. Es werden **nur abgeschlossene, qualifizierte** Bewerbungen als JSON gesendet.
 Gesendete Felder u. a.: `vorname, nachname, email, telefon, stelle, deutsch, koerperliche_taetigkeit,
-erfahrung, staplerschein, optionale_kriterien, starttermin, datum, lebenslauf, datenschutz, quelle, seite`.
+fuehrerschein_klasse_b, staplerschein, erfahrung, optionale_kriterien, starttermin, datum, lebenslauf, datenschutz, quelle, seite`.
 
 ## Optionaler Lebenslauf-Upload
 Standardmäßig deaktiviert (`STORAGE_ENABLED = false`) – das Upload-Feld wird ausgeblendet, das Formular
@@ -60,10 +63,11 @@ GitHub Pages: Repo-Einstellungen → Pages → Branch `main`, Ordner `/root`.
 Danach live unter https://saviold.github.io/gv-lacke/
 
 ## Noch zu bestätigen / anzupassen (Platzhalter)
-- **Kontakt-E-Mail** (`bewerbung@gv-lacke.de`) sowie **Impressum-/Datenschutz-Links** – bitte durch die
-  echten Angaben von GV-Lacke ersetzen. Aktuell auf die Unternehmensseite verlinkt.
+- **Kontakt-E-Mail:** `schneider@gv-lacke.de` (aus der Fachlagerist-Ausschreibung übernommen).
+  **Impressum-/Datenschutz-Links** verweisen aktuell auf die Unternehmensseite – bei Bedarf durch die echten URLs ersetzen.
 - Benefits: die von GV-Lacke gelieferten Leistungen sind eingebaut (13. Gehalt, 1.200 € Urlaubsgeld,
-  50-€-Gutschein, Fahrtkostenzuschuss, Jahresprämie, Jubiläumsbonus, betriebl. Pflegeversicherung).
+  37,5-Stunden-Woche, 50-€-Gutschein, Fahrtkostenzuschuss, Jahresprämie, Jubiläumsbonus,
+  betriebl. Pflegeversicherung, Chemie-Tarif).
   Bitte kurz bestätigen: Ist der 50-€-Gutschein **monatlich** (aktuell so kommuniziert)?
 - Weiteres/finales Bildmaterial für Hero und Sektionen kann jederzeit in `bilder/` ergänzt werden.
 
